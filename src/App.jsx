@@ -24,7 +24,7 @@ import Income from "./pages/Host/Income"
 import Reviews from "./pages/Host/Reviews"
 import Layout from "./components/Layout"
 import HostLayout from "./components/HostLayout"
-
+import HostVans from './components/HostVans';
 
 import "../server"
 
