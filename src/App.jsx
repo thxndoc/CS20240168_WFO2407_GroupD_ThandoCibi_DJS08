@@ -22,9 +22,9 @@ import VanDetail from "./pages/Vans/VanDetail"
 import Dashboard from "./pages/Host/Dashboard"
 import Income from "./pages/Host/Income"
 import Reviews from "./pages/Host/Reviews"
+import HostVans from './pages/HostVans';
 import Layout from "./components/Layout"
 import HostLayout from "./components/HostLayout"
-import HostVans from './components/HostVans';
 
 import "../server"
 
