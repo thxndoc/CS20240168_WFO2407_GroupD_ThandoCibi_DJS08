@@ -4,6 +4,11 @@ import imageUrl from "/avatar-icon.png"
 
 
 export default function Header() {
+
+    function fakeLogOut() {
+        localStorage.removeItem("loggedin")
+    }
+    
     return (
         <header>
             <Link className="site-logo" to="/">#VanLife</Link>
@@ -35,6 +40,7 @@ export default function Header() {
                         className="login-icon"
                     />
                 </Link>
+                <button onClick={fakeLogOut}>X</button>
             </nav>
         </header>
     )
