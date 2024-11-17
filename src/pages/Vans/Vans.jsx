@@ -8,7 +8,7 @@ export default function Vans() {
     const [loading, setLoading] = React.useState(false)
     const [error, setError] = React.useState(null)
     
-    const typeFilter = searchParams.get("type")
+    const typeFilter = searchParams.get("type") // get current filter value
     console.log(typeFilter)
 
     React.useEffect(() => {
@@ -27,13 +27,13 @@ export default function Vans() {
         loadVans()
     }, [])
 
-    const displayedVans = typeFilter
+    const displayedVans = typeFilter // filter vans based on search parameters
         ? vans.filter(van => van.type === typeFilter)
         : vans
 
     const vanElements = displayedVans.map(van => (
         <div key={van.id} className="van-tile">
-            <Link 
+            <Link // preserve search parameters to keep seeing filtered results
             to={van.id} 
             state={{ search: 
                 `?${searchParams.toString()}`, 
